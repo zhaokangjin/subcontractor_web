@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserServiceComponent } from './user/user-service/user-service.component';
 import { UserTestComponent } from './user/user-test/user-test.component';
+import { QueryListComponent } from './user/query-list/query-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserServiceComponent,
-    UserTestComponent
+    UserTestComponent,
+    QueryListComponent
   ],
   imports: [
     BrowserModule,
