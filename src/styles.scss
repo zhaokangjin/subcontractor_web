@@ -4,5 +4,13 @@
 
 /*清除设置默认*/
 
+.global-font-color {
+    color: #337ab7
+}
+
+.global-form-label {
+    width: 20px
+}
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
