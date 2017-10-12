@@ -18,11 +18,15 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
-            "styles.scss"
+            "styles.scss",
+            "assets/fileupload/css/fileinput.min.css"
+
         ],
         "scripts": [
-            "assets/js/jquery.min.js",
-            "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+            "../node_modules/jquery/dist/jquery.min.js",
+            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "assets/fileupload/js/fileinput.min.js",
+            "assets/fileupload/js/fileinput_locale_zh.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {
