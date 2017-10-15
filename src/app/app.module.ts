@@ -1,19 +1,19 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
-import { UserDetailsComponent } from './user/user-details/user-details.component';
+import { ErrorPageComponent } from './system/error-page/error-page.component';
+import { appRoutes } from './app.routes';
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
-    UserDetailsComponent
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
