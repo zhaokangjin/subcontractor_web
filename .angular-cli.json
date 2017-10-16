@@ -20,7 +20,6 @@
         "styles": [
             "styles.scss",
             "assets/fileupload/css/fileinput.min.css"
-
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.min.js",

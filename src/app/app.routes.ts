@@ -1,21 +1,31 @@
-import { RouterModule } from '@angular/router';
-import { Component, NgModule } from '@angular/core';
-import { AppComponent} from './app.component';
-import { UserLoginComponent } from './user/user-login/user-login.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { ErrorPageComponent } from './system/error-page/error-page.component';
 
-export const appRoutes=[
-    {
-		path:'',
-		redirectTo:'login',
-		pathMatch:'full'
-	},
-	{
-		path:"login",
-		component:UserLoginComponent
-	},
-	{
-		path:"**",
-		component:ErrorPageComponent
-	}
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: './user/user-login/user-login.module#UserLoginModule'
+    // component : UserLoginComponent
+  },
+  {
+    path: 'register',
+    loadChildren: './user/user-register/user-register.module#UserRegisterModule'
+  },
+  {
+    path: '**',
+    component: ErrorPageComponent
+  }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
