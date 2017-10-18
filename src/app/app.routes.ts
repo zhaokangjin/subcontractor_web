@@ -11,7 +11,6 @@ const routes:Routes = [ {
   },  {
     path:'login', 
     loadChildren:'./user/user-login/user-login.module#UserLoginModule'
-    // component : UserLoginComponent
   },  {
     path:'register', 
     loadChildren:'./user/user-register/user-register.module#UserRegisterModule'

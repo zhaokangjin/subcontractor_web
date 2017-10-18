@@ -7,10 +7,16 @@ const routes:Routes = [ {
     path:'', 
     component:IndexComponent, 
     children:[ {
-            path:'userinfo', 
-            redirectTo:'userinfo', 
+            path:'', 
+            redirectTo:'detail', 
             pathMatch:'full'
-        }
+    },  {
+        path:'userinfo', 
+        loadChildren:'../user-info/user-info.module#UserInfoModule'
+    },  {
+        path:'detail', 
+        component:UserDetailComponent
+    }
     ]
 }
 ]
