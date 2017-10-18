@@ -1,6 +1,6 @@
 import {Component, OnInit }from '@angular/core'; 
 
-@Component( {
+@Component({
   selector:'app-user-register', 
   templateUrl:'./user-register.component.html', 
   styleUrls:['./user-register.component.scss']
