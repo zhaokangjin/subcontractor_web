@@ -1,0 +1,124 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"> 顾问信息</h3>
+    </div>
+    <div class="panel-body">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            <div class="row">
+                                <div class="col-xs-4 col-md-4 col-xl-4"><span class="label label-primary">个人信息</span></div>
+                                <div class="col-xs-6 col-md-6 col-xl-6"></div>
+                                <div class="col-xs-2 col-md-2 col-xl-2">
+                                    <div class="fa fa-edit fa-1x"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <div class="row">
+                                <div class="col-xs-4 col-md-4 col-xl-4"><span class="label label-primary">精通技能</span></div>
+                                <div class="col-xs-6 col-md-6 col-xl-6"></div>
+                                <div class="col-xs-2 col-md-2 col-xl-2">
+                                    <div class="fa fa-edit fa-1x"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            <div class="row">
+                                <div class="col-xs-4 col-md-4 col-xl-4"><span class="label label-primary">工作经历</span></div>
+                                <div class="col-xs-6 col-md-6 col-xl-6"></div>
+                                <div class="col-xs-2 col-md-2 col-xl-2">
+                                    <div class="fa fa-edit fa-1x">
+
+                                    </div>
+                                    <a routerLink="/userinfo"></a>
+                                </div>
+                            </div>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                            <div class="row">
+                                <div class="col-xs-4 col-md-4 col-xl-4"><span class="label label-primary">教育经历</span></div>
+                                <div class="col-xs-6 col-md-6 col-xl-6"></div>
+                                <div class="col-xs-2 col-md-2 col-xl-2">
+                                    <div class="fa fa-edit fa-1x"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                            <div class="row">
+                                <div class="col-xs-4 col-md-4 col-xl-4"><span class="label label-primary">项目经历</span></div>
+                                <div class="col-xs-6 col-md-6 col-xl-6"></div>
+                                <div class="col-xs-2 col-md-2 col-xl-2">
+                                    <div class="fa fa-edit fa-1x"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // $(function() {
+                //     $('#collapseFour').collapse({
+                //         toggle: false
+                //     })
+                // });
+                // $(function() {
+                //     $('#collapseTwo').collapse('show')
+                // });
+                // $(function() {
+                //     $('#collapseThree').collapse('toggle')
+                // });
+                // $(function() {
+                //     $('#collapseOne').collapse('hide')
+                // });
+            </script>
+
+        </div>
+        <div class="panel-footer navbar-fixed-bottom">
+            <div class="text-right">
+
+            </div>
+        </div>
+    </div>
