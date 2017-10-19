@@ -17,131 +17,192 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="margin-top:-9px">
-                                <div class="col-xs-2 col-md-2 col-xl-2 "></div>
-                                <div class="col-xs-9 col-md-9 col-xl-9 " style="border-bottom:solid 1px #337ab7; margin-top:1px "></div>
-                                <div class="col-xs-1 col-md-2 col-xl-2 "></div>
-                            </div>
+
                         </a>
                     </h5>
                 </div>
                 <div id="collapseOne " class="panel-collapse collapse in ">
                     <div class="panel-body ">
-                        <div class="row ">
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-left ">电话:</div>
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-right ">{{title}}</div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-left ">电子信箱:</div>
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-right ">{{title}}</div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-left ">公司名称:</div>
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-right ">{{title}}</div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-left ">当前职位:</div>
-                            <div class="col-xs-6 col-md-6 col-xl-6 text-right ">{{title}}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-heading ">
-                    <h5 class="panel-title ">
-                        <a data-toggle="collapse " data-parent="#accordion " href="#collapseTwo ">
-                            <div class="row ">
-                                <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">精通技能</span></div>
-                                <div class="col-xs-6 col-md-6 col-xl-6 "></div>
-                                <div class="col-xs-2 col-md-2 col-xl-2 ">
-                                    <div class="fa fa-edit fa-1x "></div>
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group ">
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">电话:</label>
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
                                 </div>
-                            </div>
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseTwo " class="panel-collapse collapse in ">
-                    <div class="panel-body ">
-
+                                <div class="control-group ">
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">电子信箱:</label>
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                                </div>
+                                <div class="control-group ">
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">公司名称:</label>
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                                </div>
+                                <div class="control-group ">
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">当前职位:</label>
+                                    <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
-                <div class="panel-heading ">
-                    <h5 class="panel-title ">
-                        <a data-toggle="collapse " data-parent="#accordion " href="#collapseThree ">
-                            <div class="row ">
-                                <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">工作经历</span></div>
-                                <div class="col-xs-6 col-md-6 col-xl-6 "></div>
-                                <div class="col-xs-2 col-md-2 col-xl-2 ">
-                                    <div class="fa fa-edit fa-1x ">
+            </div>
+            <div class="panel-heading ">
+                <h5 class="panel-title ">
+                    <a data-toggle="collapse " data-parent="#accordion " href="#collapseTwo ">
+                        <div class="row ">
+                            <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">精通技能</span></div>
+                            <div class="col-xs-6 col-md-6 col-xl-6 "></div>
+                            <div class="col-xs-2 col-md-2 col-xl-2 ">
+                              <div class="fa fa-edit fa-1x" routerLink="/user/skill" style="margin-top:2px;color:#337ab7"></div>
+                            </div>
+                        </div>
+                    </a>
+                </h5>
+            </div>
+            <div id="collapseTwo " class="panel-collapse collapse in ">
+                <div class="panel-body ">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <div class="control-group ">
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">职务:</label>
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                            </div>
+                            <div class="control-group ">
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">工作单位:</label>
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                            </div>
+                            <div class="control-group ">
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">公司名称:</label>
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                            </div>
+                            <div class="control-group ">
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-right control-label">当前职位:</label>
+                                <label class="col-xs-6 col-md-6 col-xl-6 text-left control-label">{{title}}</label>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="panel-heading ">
+                <h5 class="panel-title ">
+                    <a data-toggle="collapse " data-parent="#accordion " href="#collapseThree ">
+                        <div class="row ">
+                            <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">工作经历</span></div>
+                            <div class="col-xs-6 col-md-6 col-xl-6 "></div>
+                            <div class="col-xs-2 col-md-2 col-xl-2 ">
+                                <div class="fa fa-edit fa-1x "></div>
+                            </div>
+                        </div>
+                    </a>
+                </h5>
+            </div>
+            <div id="collapseThree " class="panel-collapse collapse in ">
+                <div class="panel-body ">
+                    <table id="table-transform" data-height="150">
+                        <thead>
+                            <tr>
+                                <th data-field="id" style="width:20%">职务</th>
+                                <th data-field="name" style="width:30%">单位</th>
+                                <th data-field="price" style="width:50%">期间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    sssss
+                                </td>
+                                <td>
+                                    dddddd
+                                </td>
 
+                                <td>
+                                    <div class="input-group">
+                                        <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+                                                <span><i class="fa fa-calendar"></i> 日期选择</span>
+                                                <i class="fa fa-caret-down"></i>
+                                                </button>
                                     </div>
+                                </td>
+                            </tr>
+                        </tbody>
 
-                                </div>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-heading ">
+                <h5 class="panel-title ">
+                    <a data-toggle="collapse " data-parent="#accordion " href="#collapseFour ">
+                        <div class="row ">
+                            <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">教育经历</span></div>
+                            <div class="col-xs-6 col-md-6 col-xl-6 "></div>
+                            <div class="col-xs-2 col-md-2 col-xl-2 ">
+                                <div class="fa fa-edit fa-1x "></div>
                             </div>
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseThree " class="panel-collapse collapse in ">
-                    <div class="panel-body ">
-
-                    </div>
-                </div>
-                <div class="panel-heading ">
-                    <h5 class="panel-title ">
-                        <a data-toggle="collapse " data-parent="#accordion " href="#collapseFour ">
-                            <div class="row ">
-                                <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">教育经历</span></div>
-                                <div class="col-xs-6 col-md-6 col-xl-6 "></div>
-                                <div class="col-xs-2 col-md-2 col-xl-2 ">
-                                    <div class="fa fa-edit fa-1x "></div>
-                                </div>
+                        </div>
+                    </a>
+                </h5>
+            </div>
+            <div id="collapseFour " class="panel-collapse collapse in ">
+                <div class="panel-body ">
+                    <div class="row ">
+                        <div class="control-group ">
+                            <div class="col-xs-3 col-md-3 col-xl-3 text-right control-label">
+                                <ul class="list-group">
+                                    <li class="list-group-item">浙江大学</li>
+                                </ul>
                             </div>
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseFour " class="panel-collapse collapse in ">
-                    <div class="panel-body ">
+                            <div class="col-xs-9 col-md-9 col-xl-9 text-left control-label">
 
-                    </div>
-                </div>
-                <div class="panel-heading ">
-                    <h5 class="panel-title ">
-                        <a data-toggle="collapse " data-parent="#accordion " href="#collapseFive ">
-                            <div class="row ">
-                                <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">项目经历</span></div>
-                                <div class="col-xs-6 col-md-6 col-xl-6 "></div>
-                                <div class="col-xs-2 col-md-2 col-xl-2 ">
-                                    <div class="fa fa-edit fa-1x "></div>
-                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">浙江大学</li>
+                                    <li class="list-group-item">学位专业</li>
+                                    <li class="list-group-item">工作期间</li>
+                                </ul>
                             </div>
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapseFive " class="panel-collapse collapse in ">
-                    <div class="panel-body ">
-
+                        </div>
                     </div>
                 </div>
             </div>
-            <script>
-                // $(function() {
-                //     $('#collapseFour').collapse({
-                //         toggle: false
-                //     })
-                // });
-                // $(function() {
-                //     $('#collapseTwo').collapse('show')
-                // });
-                // $(function() {
-                //     $('#collapseThree').collapse('toggle')
-                // });
-                // $(function() {
-                //     $('#collapseOne').collapse('hide')
-                // });
-            </script>
+            <div class="panel-heading ">
+                <h5 class="panel-title ">
+                    <a data-toggle="collapse " data-parent="#accordion " href="#collapseFive ">
+                        <div class="row ">
+                            <div class="col-xs-4 col-md-4 col-xl-4 "><span class="label label-primary ">项目经历</span></div>
+                            <div class="col-xs-6 col-md-6 col-xl-6 "></div>
+                            <div class="col-xs-2 col-md-2 col-xl-2 ">
+                                <div class="fa fa-edit fa-1x "></div>
+                            </div>
+                        </div>
+                    </a>
+                </h5>
+            </div>
+            <div id="collapseFive " class="panel-collapse collapse in ">
+                <div class="panel-body ">
+                  <div class="row ">
+                    <div class="control-group ">
+                        <div class="col-xs-3 col-md-3 col-xl-3 text-right control-label">
+                            <ul class="list-group">
+                                <li class="list-group-item">浙江大学</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-9 col-md-9 col-xl-9 text-left control-label">
 
+                            <ul class="list-group">
+                                <li class="list-group-item">浙江大学</li>
+                                <li class="list-group-item">学位专业</li>
+                                <li class="list-group-item">工作期间</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
-        <div class="panel-footer navbar-fixed-bottom ">
-            <div class="text-right ">
 
-            </div>
+    </div>
+    <div class="panel-footer navbar-fixed-bottom ">
+        <div class="text-right ">
+
         </div>
     </div>
+</div>

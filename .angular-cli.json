@@ -1,63 +1,68 @@
-{
-    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-    "project": {
-        "name": "angular-demos"
-    },
-    "apps": [{
-        "root": "src",
-        "outDir": "dist",
-        "assets": [
-            "assets",
-            "favicon.ico"
-        ],
-        "index": "index.html",
-        "main": "main.ts",
-        "polyfills": "polyfills.ts",
-        "test": "test.ts",
-        "tsconfig": "tsconfig.app.json",
-        "testTsconfig": "tsconfig.spec.json",
-        "prefix": "app",
-        "styles": [
-            "styles.scss",
-            "assets/fileupload/css/fileinput.min.css"
-        ],
-        "scripts": [
-            "../node_modules/jquery/dist/jquery.min.js",
-            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-            "assets/fileupload/js/fileinput.min.js",
-            "assets/fileupload/js/fileinput_locale_zh.js"
-        ],
-        "environmentSource": "environments/environment.ts",
-        "environments": {
-            "dev": "environments/environment.ts",
-            "prod": "environments/environment.prod.ts"
-        }
-    }],
-    "e2e": {
-        "protractor": {
-            "config": "./protractor.conf.js"
-        }
-    },
-    "lint": [{
-            "project": "src/tsconfig.app.json",
-            "exclude": "**/node_modules/**"
-        },
-        {
-            "project": "src/tsconfig.spec.json",
-            "exclude": "**/node_modules/**"
-        },
-        {
-            "project": "e2e/tsconfig.e2e.json",
-            "exclude": "**/node_modules/**"
-        }
-    ],
-    "test": {
-        "karma": {
-            "config": "./karma.conf.js"
-        }
-    },
-    "defaults": {
-        "styleExt": "scss",
-        "component": {}
-    }
-}
+ {
+     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+     "project": {
+         "name": "angular-demos"
+     },
+     "apps": [{
+         "root": "src",
+         "outDir": "dist",
+         "assets": [
+             "assets",
+             "favicon.ico"
+         ],
+         "index": "index.html",
+         "main": "main.ts",
+         "polyfills": "polyfills.ts",
+         "test": "test.ts",
+         "tsconfig": "tsconfig.app.json",
+         "testTsconfig": "tsconfig.spec.json",
+         "prefix": "app",
+         "styles": [
+             "styles.scss",
+             "assets/fileupload/css/fileinput.min.css",
+             "assets/datepicker/css/daterangepicker-bs3.css",
+             "assets/table/css/bootstrap-table.css"
+         ],
+         "scripts": [
+             "../node_modules/jquery/dist/jquery.min.js",
+             "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+             "assets/fileupload/js/fileinput.min.js",
+             "assets/fileupload/js/fileinput_locale_zh.js",
+             "assets/datepicker/js/moment.min.js",
+             "assets/datepicker/js/daterangepicker.js",
+             "assets/table/js/bootstrap-table.js"
+         ],
+         "environmentSource": "environments/environment.ts",
+         "environments": {
+             "dev": "environments/environment.ts",
+             "prod": "environments/environment.prod.ts"
+         }
+     }],
+     "e2e": {
+         "protractor": {
+             "config": "./protractor.conf.js"
+         }
+     },
+     "lint": [{
+             "project": "src/tsconfig.app.json",
+             "exclude": "**/node_modules/**"
+         },
+         {
+             "project": "src/tsconfig.spec.json",
+             "exclude": "**/node_modules/**"
+         },
+         {
+             "project": "e2e/tsconfig.e2e.json",
+             "exclude": "**/node_modules/**"
+         }
+     ],
+     "test": {
+         "karma": {
+             "config": "./karma.conf.js"
+         }
+     },
+     "defaults": {
+         "styleExt": "scss",
+         "component": {}
+     }
+ }
