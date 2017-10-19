@@ -2,7 +2,7 @@
 
 @charset "utf-8";
 
-/*清除设置默认*/
+body{background-color: #fff;}
 
 .global-font-color {
     color: #337ab7
@@ -12,5 +12,17 @@
     width: 20px
 }
 
+.detail_row_height{
+    height:5px;
+}
+.detail_row_height_s{
+    height:10px;
+}
+.detail_row_height_m{
+    height:20px;
+}
+.detail_row_height_l{
+    height:40px;
+}
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";

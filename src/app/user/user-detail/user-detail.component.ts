@@ -10,11 +10,8 @@ export class UserDetailComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // $('#reservation').daterangepicker(null, function(start, end, label) {
-
-    // console.log(start.toISOString(), end.toISOString(), label);
-
-    // });
-    $("#table-transform").bootstrapTable();
+    $(".collapseMain").collapse("show");
+    $(".collapseBranch").collapse("hide");
+    
   }
 }
