@@ -1,28 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
 
 @charset "utf-8";
-
-body{background-color: #fff;}
+body {
+    background-image: repeating-linear-gradient( 45deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1)15px, transparent 0, transparent 30px);
+}
 
 .global-font-color {
-    color: #337ab7
+    color: #337ab7;
 }
 
 .global-form-label {
-    width: 20px
+    width: 20px;
 }
 
-.detail_row_height{
-    height:5px;
+.detail_row_height {
+    height: 5px;
 }
-.detail_row_height_s{
-    height:10px;
+
+.detail_row_height_s {
+    height: 10px;
 }
-.detail_row_height_m{
-    height:20px;
+
+.detail_row_height_m {
+    height: 20px;
 }
-.detail_row_height_l{
-    height:40px;
+
+.detail_row_height_l {
+    height: 40px;
+}
+
+.glogal_word {
+    color: #333;
+    cursor: pointer;
+}
+
+.glogal_ico {
+    color: #f0ad4e;
+}
+
+.glogal_line_dashed {
+    color: #f0ad4e;
+    border-bottom: 1px dashed #f0ad4e;
+}
+
+.glogal_line_solid88 {
+    width: 88%;
+    margin: 0 auto;
+    border-bottom: 1px solid #337ab7;
+}
+
+.glogal_line_solid100 {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #337ab7;
+}
+.glogal_border_line{
+  border-bottom: 1px dashed #f0ad4e;
 }
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
