@@ -12,6 +12,5 @@ export class UserDetailComponent implements OnInit {
   ngOnInit() {
     $(".collapseMain").collapse("show");
     $(".collapseBranch").collapse("hide");
-    
   }
 }

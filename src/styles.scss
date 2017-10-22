@@ -38,6 +38,17 @@ body {
     color: #f0ad4e;
 }
 
+.glogal_ico_operator {
+    margin-top: 2px;
+    color: #337ab7;
+    text-align: left;
+}
+
+.glogal_ico_operator_add {
+    margin-top: 2px;
+    margin-left: -6px;
+}
+
 .glogal_line_dashed {
     color: #f0ad4e;
     border-bottom: 1px dashed #f0ad4e;
@@ -54,8 +65,10 @@ body {
     margin: 0 auto;
     border-bottom: 1px solid #337ab7;
 }
-.glogal_border_line{
-  border-bottom: 1px dashed #f0ad4e;
+
+.glogal_border_line {
+    border-bottom: 1px dashed #f0ad4e;
 }
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
