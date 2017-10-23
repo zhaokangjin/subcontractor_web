@@ -29,45 +29,63 @@ body {
     height: 40px;
 }
 
-.glogal_word {
+.global_word {
     color: #333;
     cursor: pointer;
 }
 
-.glogal_ico {
+.global_ico {
     color: #f0ad4e;
 }
 
-.glogal_ico_operator {
+.global_ico_operator {
     margin-top: 2px;
     color: #337ab7;
     text-align: left;
 }
 
-.glogal_ico_operator_add {
+.global_ico_operator_add {
     margin-top: 2px;
     margin-left: -6px;
 }
 
-.glogal_line_dashed {
+.global_line_dashed {
     color: #f0ad4e;
     border-bottom: 1px dashed #f0ad4e;
 }
 
-.glogal_line_solid88 {
+.global_line_solid80 {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #337ab7;
+}
+
+.global_line_solid88 {
     width: 88%;
     margin: 0 auto;
     border-bottom: 1px solid #337ab7;
 }
 
-.glogal_line_solid100 {
+.global_line_solid100 {
     width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid #337ab7;
 }
 
-.glogal_border_line {
+.global_border_line {
     border-bottom: 1px dashed #f0ad4e;
+}
+
+.text-right {
+    text-align: right;
+    padding-right: 14px;
+    margin-top: -1px;
+}
+
+.text-left {
+    text-align: left;
+    padding-left: 2px;
+    margin-top: -1px;
 }
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
