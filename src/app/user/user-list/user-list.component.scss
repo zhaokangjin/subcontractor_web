@@ -1,0 +1,17 @@
+.ul-content-detail {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-detail {
+    text-indent: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 200px;
+    border-radius: 2px;
+    border: 1px solid #337ab7;
+}

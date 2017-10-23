@@ -11,6 +11,7 @@ import { UserProjectComponent } from "./user-project/user-project.component";
 import { UserRegisterComponent } from "./user-register/user-register.component";
 import { UserSkillComponent } from "./user-skill/user-skill.component";
 import { UserWorkexperienceComponent } from "./user-workexperience/user-workexperience.component";
+// import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   imports: [CommonModule, UserRouter],
