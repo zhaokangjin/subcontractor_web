@@ -5,13 +5,13 @@ import { UserModule } from "./user.module";
 import { IndexComponent } from "./index/index.component";
 import { UserDetailComponent } from "./user-detail/user-detail.component";
 import { UserEducationComponent } from "./user-education/user-education.component";
-import { UserInfoComponent } from "./user-info/user-info.component";
 import { UserLoginComponent } from "./user-login/user-login.component";
 import { UserPasswordComponent } from "./user-password/user-password.component";
 import { UserProjectComponent } from "./user-project/user-project.component";
 import { UserRegisterComponent } from "./user-register/user-register.component";
 import { UserSkillComponent } from "./user-skill/user-skill.component";
 import { UserWorkexperienceComponent } from "./user-workexperience/user-workexperience.component";
+
 // import { UserListComponent } from "./user-list/user-list.component";
 const routes: Routes = [
   {
@@ -23,6 +23,7 @@ const routes: Routes = [
         redirectTo: "detail",
         pathMatch: "full"
       },
+     
       {
         path: "detail",
         component: UserDetailComponent
@@ -30,10 +31,6 @@ const routes: Routes = [
       {
         path: "education",
         component: UserEducationComponent
-      },
-      {
-        path: "userinfo",
-        component: UserInfoComponent
       },
       {
         path: "login",
@@ -46,10 +43,6 @@ const routes: Routes = [
       {
         path: "project",
         component: UserProjectComponent
-      },
-      {
-        path: "register",
-        component: UserRegisterComponent
       },
       {
         path: "skill",

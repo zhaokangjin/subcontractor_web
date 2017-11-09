@@ -30,7 +30,8 @@
              "assets/fileupload/js/fileinput_locale_zh.js",
              "assets/datepicker/js/moment.min.js",
              "assets/datepicker/js/daterangepicker.js",
-             "assets/table/js/bootstrap-table.js"
+             "assets/table/js/bootstrap-table.js",
+             "assets/js/jquery.backstretch.js"
          ],
          "environmentSource": "environments/environment.ts",
          "environments": {

@@ -10,157 +10,119 @@
 
                     <div class="detail_row_height"></div>
                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="detail_row_height"></div>
+                                <div class="row">
+                                    <div class="col-xs-8 text_left">{{account?.nickname}}</div>
+                                    <div class="col-xs-2 text_left">{{account?.sex}}</div>
+                                    <div class="col-xs-1"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-10 text_left">{{account?.province}}{{account?.city}}</div>
+                                    <div class="col-xs-1"></div>
+                                </div>
+                                <div class="detail_row_height"></div>
+                            </div>
+                            <div class="col-xs-5">
+                                <img src={{account?.headimgurl}} class=" img-thumbnail img-circle" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa-fw glogal_ico"></i></span>
+                            <span class="input-group-addon">
+                <i class="fa fa-user fa-fw glogal_ico"></i>
+              </span>
                             <input class="form-control required" type="text" placeholder="姓名" name="username" autofocus="autofocus" maxlength="50" />
                         </div>
                     </div>
                     <div class="detail_row_height"></div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <input class="form-control" title="上传照片" id="filephoto" type="file" multiple=true name="photo">
-                    </div>
-                    <div class="detail_row_height"></div>
+                    </div> -->
+                    <!-- <div class="detail_row_height"></div> -->
                     <div class="form-group">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-mobile fa-fw glogal_ico"></i></span>
-                            <input class="form-control required" type="text" placeholder="手机号码" name="mobile" maxlength="13" minlength="7" />
+                            <span class="input-group-addon">
+                <i class="fa fa-mobile fa-fw glogal_ico"></i>
+              </span>
+                            <input class="form-control " type="text" placeholder="手机号码" name="mobile" maxlength="13" minlength="7" />
                         </div>
                     </div>
                     <div class="detail_row_height"></div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw glogal_ico"></i></span>
-                            <input class="form-control required" type="text" placeholder="邮箱号" name="email" maxlength="13" minlength="7" />
-                        </div>
-                    </div>
-                    <div class="detail_row_height"></div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-id-card fa-fw glogal_ico"></i></span>
-                            <input class="form-control required" type="text" placeholder="身份证号" name="idcard" maxlength="13" minlength="7" />
-                        </div>
-                    </div>
-                    <div class="detail_row_height"></div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-industry fa-fw glogal_ico"></i></span>
-                            <input type="text" class="form-control" placeholder="行业" name="industry">
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                        行业选择
-                                        <span class="caret"></span>
-                                    </button>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="#">互联网行业</a></li>
-                                    <li><a href="#">能源行业</a></li>
-                                    <li><a href="#">电信行业</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="fa label label-primary">现居住地</span>
-                    <div class="form-group">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group">
 
-                                            <input class="form-control required" type="text" placeholder="省" name="province" maxlength="13" minlength="7" />
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> </button>
-                                                <ul class="dropdown-menu pull-left">
-                                                    <li><a href="#">北京</a></li>
-                                                    <li><a href="#">上海</a></li>
-                                                    <li><a href="#">深圳</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input class="form-control required" type="text" placeholder="市" name="city" maxlength="13" minlength="7" />
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="#">罗湖区</a></li>
-                                                    <li><a href="#">龙岗区</a></li>
-                                                    <li><a href="#">南山区</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input class="form-control required" type="text" placeholder="县" name="village" maxlength="13" minlength="7" />
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="#">龙岗街道</a></li>
-                                                    <li><a href="#">布吉街道</a></li>
-                                                    <li><a href="#">横岗街道</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4 col-xl-4 ">
 
-                            </tbody>
-                        </table>
+                            <span class="fa label label-primary ">个人简介</span>
+                        </div>
+                        <div class="col-xs-5 col-md-5 col-xl-5 "></div>
+                        <div class="col-xs-1"> </div>
                     </div>
-                    <span class="fa label label-primary ">户籍地址</span>
-                    <div class="form-group">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="input-group">
-                                            <input class="form-control required" type="text" placeholder="省" name="province" maxlength="13" minlength="7" />
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> </button>
-                                                <ul class="dropdown-menu pull-left">
-                                                    <li><a href="#">北京</a></li>
-                                                    <li><a href="#">上海</a></li>
-                                                    <li><a href="#">深圳</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input class="form-control required" type="text" placeholder="市" name="city" maxlength="13" minlength="7" />
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="#">罗湖区</a></li>
-                                                    <li><a href="#">龙岗区</a></li>
-                                                    <li><a href="#">南山区</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group">
-                                            <input class="form-control required" type="text" placeholder="县" name="village" maxlength="13" minlength="7" />
-                                            <div class="input-group-btn">
-                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> </button>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li><a href="#">龙岗街道</a></li>
-                                                    <li><a href="#">布吉街道</a></li>
-                                                    <li><a href="#">横岗街道</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <span class="fa label label-primary ">个人简介</span>
                     <div class="form-group">
                         <textarea class="form-control" rows="3"></textarea>
                     </div>
-                    <div class="form-group">
+
+                    <div class="detail_row_height_s"></div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-4 col-xl-4 ">
+
+                                        <span class="fa label label-primary ">技能专长</span>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 col-xl-5 "></div>
+                                    <div class="col-xs-1"> </div>
+                                </div>
+                                <div class="global_line_solid95"> </div>
+                            </a>
+                        </div>
+                        <div class="detail_row_height_s"></div>
+                        <div id="collapseTwo" class="accordion-body collapse collapseMain">
+                            <div class="accordion-inner">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="row" *ngFor="let skillType of skillTypeArr">
+
+                                                <div class="col-xs-3">
+                                                    <label class="checkbox-inline">
+                            <input type="checkbox" value="option1" (click)="register()"> {{skillType.skillName}}
+                          </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_row_height_s"></div>
+                                    <div class="row">
+
+                                        <div class="col-xs-11">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control">
+                                                <span class="input-group-addon">
+                          <i class="fa fa-filter fa-fw"></i>
+                        </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="detail_row_height_m"></div>
+                                    <div class="container">
+
+                                    </div>
+
+                                </div>
+                                <div class="detail_row_height_l"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-navicon fa-fw glogal_ico"></i></span>
                             <input type="text" class="form-control" placeholder="行业" name="industry">
@@ -176,14 +138,30 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </form>
         </div>
         <div class="panel-footer navbar-fixed-bottom">
-            <div class="text-right">
 
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-5">
+                    <div class="row">
+                        <div class="col-xs-11 label label-danger button_style" (click)="weiXinRegister()">保存</div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
+                <div class="col-xs-5">
+                    <div class="row">
+                        <div class="col-xs-11 label label-warning button_style">取消</div>
+                        <div class="col-xs-1"></div>
+                    </div>
+                </div>
             </div>
+            <div class="col-xs-1"></div>
+
+
         </div>
 
     </div>
