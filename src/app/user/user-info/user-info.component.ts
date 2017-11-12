@@ -39,12 +39,6 @@ export class UserInfoComponent implements OnInit {
     this.type = this.routerInfo.snapshot.queryParams["type"];
     // alert(this.openId+""+this.type)
     console.log(this.openId+":"+this.type)
-    let skillParam = { page: { pageNum: 1, pageSize: 4 } };
-    this.getSkillType(
-      "http://liveaboard.cn/skillType/queryList",
-      skillParam,
-      options
-    );
     let accountParam = { openId: this.userId, type: this.type };
     this.getAccount(
       "http://liveaboard.cn/account/getUser",
@@ -75,14 +69,6 @@ export class UserInfoComponent implements OnInit {
         // this.skillTypeArr = data.list;
         // this.user.skillTypeArr = data.list;
 
-      });
-  }
-  getSkillType(url, data, ops) {
-    this.http
-      .post(url, data, ops)
-      .map(res => res.json())
-      .subscribe(data => {
-        this.skillTypeArr = data.list;
       });
   }
   getAccount(url, data, ops) {
