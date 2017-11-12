@@ -1,12 +1,14 @@
 import { Component, OnInit } from "@angular/core";
-import { NgModel } from "@angular/forms";
+import { NgModel,FormsModule } from "@angular/forms";
 import { Headers, Http, RequestOptions } from "@angular/http";
-import { ActivatedRoute } from "@angular/router";
+import {Router, ActivatedRoute ,Params} from  "@angular/router";
 import "rxjs/add/operator/map";
 import { Account } from "../Account";
 import { SkillType } from "../domain/SkillType";
 import { User } from "../domain/User";
+import { Location } from "@angular/common";
 declare var $: any;
+
 @Component({
   selector: "app-user-info",
   templateUrl: "./user-info.component.html",
@@ -19,9 +21,12 @@ export class UserInfoComponent implements OnInit {
   public account: Account;
   public skillTypeArr: SkillType[];
   public user: User;
-  constructor(public routerInfo: ActivatedRoute, public http: Http) {}
-  weiXinRegister() {}
+  constructor(public routerInfo: ActivatedRoute, public http: Http,public location:Location,public router:Router) {}
+  weiXinRegister() {
+    console.log(JSON.stringify(this.user));
+  }
   ngOnInit() {
+    this.user = new User();
     $(".collapseMain").collapse("show");
     $(".collapseBranch").collapse("hide");
     let headers = new Headers({
@@ -30,8 +35,10 @@ export class UserInfoComponent implements OnInit {
     let options = new RequestOptions({
       headers: headers
     });
-    this.userId = this.routerInfo.queryParams["openId"];
-    this.type = this.routerInfo.queryParams["type"];
+    this.openId = this.routerInfo.snapshot.queryParams['openId'];
+    this.type = this.routerInfo.snapshot.queryParams["type"];
+    // alert(this.openId+""+this.type)
+    console.log(this.openId+":"+this.type)
     let skillParam = { page: { pageNum: 1, pageSize: 4 } };
     this.getSkillType(
       "http://liveaboard.cn/skillType/queryList",
@@ -45,6 +52,12 @@ export class UserInfoComponent implements OnInit {
       options
     );
   }
+  addSkill(id, name) {
+
+    if (id && name) {
+      this.user.skillTypeArr.push(id);
+     }
+  }
   register() {
     let headers = new Headers({
       "Content-Type": "application/json;charset=utf-8"
@@ -52,13 +65,16 @@ export class UserInfoComponent implements OnInit {
     let options = new RequestOptions({
       headers: headers
     });
+    console.log(this.user)
+
     this.http
-      .post("http://liveaboard.cn/user/save", this.user, options)
-      .map(res => res.json())
+      .post("http://liveaboard.cn/user/save",JSON.stringify(this.user), options)
+      // .map(res => res.json())
       .subscribe(data => {
-        this.skillTypeArr = data.list;
-        this.user.skillTypeArr = data.list;
-        console.log(JSON.stringify(data));
+        console.log(data)
+        // this.skillTypeArr = data.list;
+        // this.user.skillTypeArr = data.list;
+
       });
   }
   getSkillType(url, data, ops) {
@@ -67,8 +83,6 @@ export class UserInfoComponent implements OnInit {
       .map(res => res.json())
       .subscribe(data => {
         this.skillTypeArr = data.list;
-        this.user.skillTypeArr = data.list;
-        console.log(JSON.stringify(data));
       });
   }
   getAccount(url, data, ops) {
@@ -76,6 +90,8 @@ export class UserInfoComponent implements OnInit {
       .post(url, data, ops)
       .map(res => res.json())
       .subscribe(data => {
+        this.getUser(JSON.stringify({"userId":data.userId}));
+        this.user.userId = data.userId;
         this.user.userId = this.account = JSON.parse(data.descr);
         if (this.account.sex && this.account.sex == "1") {
           this.account.sex = "男";
@@ -88,6 +104,26 @@ export class UserInfoComponent implements OnInit {
         console.log(this.account);
       });
   }
+
+
+  getUser(data) {
+    let headers = new Headers({
+      "Content-Type": "application/json;charset=utf-8"
+    });
+    let options = new RequestOptions({
+      headers: headers
+    });
+    this.http
+    .post("http://liveaboard.cn/user/getUserById", data, options)
+    .map(res => res.json())
+    .subscribe(data => {
+      this.user =data;
+    });
+  }
+
+
+
+
   fileinput(divDom) {
     $("#" + divDom).fileinput({
       showUpload: false,
@@ -104,5 +140,9 @@ export class UserInfoComponent implements OnInit {
         return filename.replace("(", "_").replace("]", "_");
       }
     });
+  }
+  routerLinkUserDetail() {
+    // this.openId = '123'
+    this.router.navigateByUrl('user/detail?userId='+ this.user.userId+'&openId='+this.openId)
   }
 }

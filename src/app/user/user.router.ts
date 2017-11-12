@@ -19,12 +19,6 @@ const routes: Routes = [
     component: IndexComponent,
     children: [
       {
-        path: "",
-        redirectTo: "detail",
-        pathMatch: "full"
-      },
-     
-      {
         path: "detail",
         component: UserDetailComponent
       },
